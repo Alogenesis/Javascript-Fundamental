@@ -26,3 +26,8 @@ var a = 20
     let b = 15
 }
 console.log(a)
+
+function sayHello(username, userLastname) // Parameter ตัวแปรของฟังก์ชั่น
+    {
+        return 'Hello ' + username + ' ' + userLastname
+    }

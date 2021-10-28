@@ -1,0 +1,55 @@
+<head>
+</head>
+<body>
+    <h1>Fahrenheit and Celsius Converter</h1>
+    <div id='toCelsius'></div>
+    <div id='toFahrenheit'></div>
+    <input id = 'inputValue' type = 'text'></input>
+    <button onclick="toCelsiusProgram(document.getElementById('inputValue').value)">แปลงเป็น Celsius</button>
+    <button onclick="toFahrenheitProgram(document.getElementById('inputValue').value)">แปลงเป็น Fahrenheit</button>
+    
+<script>
+    //create function
+    function toCelsius(fahrenheit){
+        let value = (fahrenheit-32)*5 /9
+        return value.toFixed(2) + ' Celsius'
+    }
+    
+    function display(elementID, value)
+    {
+        document.getElementById(elementID).innerHTML = value
+    }
+
+
+    function toFahrenheit(celsius){
+        let value = (celsius*9/5) + 32
+        return value.toFixed(2) + ' Fahrenheit'
+    }
+
+    // create function to call function
+    function toCelsiusProgram(value)
+    {
+        alert(toCelsius(value))
+    }
+
+    function toFahrenheitProgram(value)
+    {
+        alert(toFahrenheit(value))
+    }
+
+
+    //call function
+
+    // alert(toCelsius(150))
+    // display('toCelsius', toCelsius(150))
+
+    // alert(toFahrenheit(37))
+    // display('toFahrenheit', toFahrenheit(37))
+
+
+    
+
+
+
+</script>
+</body>
