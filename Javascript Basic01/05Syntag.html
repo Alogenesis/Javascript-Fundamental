@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- การกำหนดค่าต่างๆ -->
+<p id="demo1">Text1 here</p>
+<script>
+var x, y, z;       // ประกาศตัวแปร (ห้ามลืม)
+x = 5; y = 6;      // assign ค่า
+z = x + y;         // คำนวณ
+
+document.getElementById("demo1").innerHTML = "Value of Z is " + z ;
+</script>
+
+<!-- การใส่ int float string และ var ที่มี value -->
+<p id="demoInt">Int</p>
+<p id="demoFloat">Float</p>
+<p id="demoString">String</p>
+<p id="demoVar">Var Z</p>
+<p id="demoOperator">Operator Test</p>
+<p id="demoJoinText">Join Text test</p>
+<script>
+    document.getElementById("demoInt").innerHTML = 25 ;
+    document.getElementById("demoFloat").innerHTML = 25.7536471 ;
+    document.getElementById("demoString").innerHTML = "25String" ;
+    document.getElementById("demoVar").innerHTML = z ;
+    // + - * / ใช้กับตัวเลขได้ เพื่อดำเนินการ
+    document.getElementById("demoOperator").innerHTML = (25+30)*5 ;
+    // + ใช้กับการต่อ ข้อความ
+    document.getElementById("demoJoinText").innerHTML = "ข้อความ" + "ต่อกับตัวแปร = " + z ;
+</script>
+
+
+<!-- ตัวแปรเป็นเรื่อง Sensitive -->
+<p id="demoVar1">Var1</p>
+<p id="demovar1">var1</p>
+<script>
+    var Var1 , var1 ;
+    var1 = 10 ;
+    Var1 = 20 ;
+
+    document.getElementById("demoVar1").innerHTML = "Value of Var1 = " + Var1;
+    document.getElementById("demovar1").innerHTML = "Value of var1 = " + var1;
+</script>
+
+
+
+
+
+
+</body>
+</html>

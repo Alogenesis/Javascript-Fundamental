@@ -1,0 +1,42 @@
+<head>
+</head>
+<body>
+    <h3>โปรแกรมทายหัวก้อย</h3>
+    <h4 id='result'></h4>
+    <h5 id='incorrect-result'></h5>
+    
+<script>
+    let round = prompt('คุณจะเล่นทั้งหมดกี่รอบ')
+    score = 0
+    for(var i = 0; i < round; i++){
+        var answer = prompt('หัว หรือ ก้อย')
+        var random = Math.floor(Math.random() * 10) // random เลข 0 - 9
+        console.log(random)
+        if (random <= 4 ){
+            //หัว
+            random = 'หัว'
+        }// end if
+        else {
+            //ก้อย
+            random = 'ก้อย'
+        }//end else
+        console.log(random)
+
+        if (answer == random){
+            // ตอบถูก
+            alert('คุณตอบถูก' + 'คำตอบคือ ' + random)
+            score += 1
+        }
+        else {
+            // ตอบผิด
+            alert('เสียใจ คุณตอบผิด' + 'คำตอบคือ ' + random)
+        }
+        
+
+    }//for end
+    document.getElementById('result').innerHTML = 'คะแนนสูงสุดคือ ' + score
+    document.getElementById('incorrect-result').innerHTML = 'ตอบผิด ' + (round - score) + ' ครั้ง'
+
+
+</script>
+</body>

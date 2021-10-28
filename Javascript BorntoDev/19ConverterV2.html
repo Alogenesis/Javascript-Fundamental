@@ -1,0 +1,41 @@
+<head>
+</head>
+<body>
+    <h1>Fahrenheit and Celsius Converter</h1>
+    <div id='toCelsius'></div>
+    <div id='toFahrenheit'></div>
+    
+<script>
+    //create function
+    function toCelsius(fahrenheit){
+        let value = (fahrenheit-32)*5 /9
+        return value.toFixed(2) + ' Celsius'
+    }
+    
+    function display(elementID, value)
+    {
+        document.getElementById(elementID).innerHTML = value
+    }
+
+
+    function toFahrenheit(celsius){
+        let value = (celsius*9/5) + 32
+        return value.toFixed(2) + ' Fahrenheit'
+    }
+
+
+    //call function
+
+    alert(toCelsius(150))
+    display('toCelsius', toCelsius(150))
+
+    alert(toFahrenheit(37))
+    display('toFahrenheit', toFahrenheit(37))
+
+
+    
+
+
+
+</script>
+</body>

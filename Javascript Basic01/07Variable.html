@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="demo1">Text Show</p>
+<p id="demo2">Text Show</p>
+<p id="demo3">Text Show</p>
+<p id="demo4">Text Show</p>
+
+<script>
+    /* วิธีประกาศตัวแปร มี 2 แบบ คือ
+    1. แบบ ประกาศตัวแปรก่อน แล้วค่อยเซ็ตค่า
+    เช่น var x,y,z;
+        x = 10;
+    2. แบบ เซ็ตค่าในบรรทัดเดียว
+    เช่น var x = 10;
+
+    **note ใน JS มักใช้ camelCase เล็กแล้วใหญ่ติดกัน ในการประกาศตัวแปร
+    และ เครื่องหมาย = ไม่ใช่เท่ากับ แต่เป็นการ assign ค่า
+        เครื่องหมาย == หมายถึง เท่ากับ
+        เหมือน python
+    */
+
+// ตัวอย่าง ประกาศตัวแปรในบรรทัดเดียวแล้วโชว์
+var carName = "Volvo";
+document.getElementById("demo1").innerHTML = carName;
+
+// ตัวอย่าง ประกาศตัวแปร พร้อม assign หลายค่า ในบรรทัดเดียว
+var person = "John Doe", carName = "Volvo", price = 200;
+document.getElementById("demo2").innerHTML = person + carName + price;
+
+// ข้อควรระวัง ในการให้ค่าตัวแปร ถ้ามี Str "ขึ้นหน้า" จะทำให้ทั้งหมดเป็น Str
+var m = "5" + 2 + 3;
+document.getElementById("demo3").innerHTML = m;  // เลขโชว์เป็น 523 แทนที่จะเป็น "5"5
+
+// แต่ ในการให้ค่าตัวแปร ถ้ามี Str "ลงท้าย" จะทำให้ ข้างหน้า ทำงานปกติ แล้วต่อท้ายด้วย String
+var n = 2 + 3 + "5";
+document.getElementById("demo4").innerHTML = n;
+
+</script>
+
+</body>
+</html>

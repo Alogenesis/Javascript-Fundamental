@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 2. Head JS function Tag -->
+<script>
+    function myFunction() {
+    document.getElementById("demoHead").innerHTML = " function myFunction() { java order } is header function JVS" ;
+    }
+</script>
+
+</head>
+<body>
+<!-- 1. Example JS Tag -->
+<h2>Javascript Tag Example</h2>
+<p id="demoEx"></p>
+<script>
+    document.getElementById("demoEx").innerHTML = "< script > text < /script > is Javascrip Tag Example";
+</script>
+<br><br>
+
+<!-- 2. Head JS function Tag -->
+<h2>Javascript Head function Example</h2>
+<p id="demoHead">Click to change with myFunction</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+
+<!-- 3. Body JS function Tag -->
+<h2>Javascript body function Example</h2>
+<p id="demoBody">Click to change with bodyFunction</p>
+<button type="button" onclick="bodyFunction()">Try more!</button>
+
+<script>
+function bodyFunction() {
+    document.getElementById("demoBody").innerHTML = "function bodyFunction() { java order } is header function JVS" ;
+    }
+</script>
+
+<!-- 4. External JS function tag -->
+<h2>Javascript from External function Example</h2>
+<p id="demoExternal">Click button to change text follow external function</p>
+<button type="button" onclick="fromExternalScript()">Let's Go</button>
+<script src="myScript.js"></script>
+
+
+
+
+</body>
+</html>

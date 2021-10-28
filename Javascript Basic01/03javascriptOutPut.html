@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    JavaScript can "display" data in different ways:<br>
+
+Writing into an HTML element, using innerHTML.<br>
+Writing into the HTML output using document.write().<br>
+Writing into an alert box, using window.alert().<br>
+Writing into the browser console, using console.log().<br>
+</div>
+<br>
+
+<!-- Change Element by innerHTML -->
+<h2>Change Element by innerHTML</h2>
+<p>5 + 6 = ?</p>
+<p id="demo1">blank</p>
+
+<script>
+document.getElementById("demo1").innerHTML = 5 + 6;
+</script>
+
+<!-- Write Document by document.write -->
+<h2>Write Document by document.write</h2>
+<h4>Becaful!! Never call document.write after the document has finished loading.
+It will overwrite the whole document.</h4>
+<script>
+document.write(5 + 6);
+</script>
+<br>
+<button type="button" onclick="document.write(5 + 6)">Test document.write on button.</button>
+
+<!-- Window alert -->
+<h3>This insert window alert JS</h3>
+<p> That shown after F5 </p>
+<script>
+window.alert('Window.alert');
+</script>
+
+<!-- Window Keyword -->
+<h3>Window Keyword</h3>
+<p> Show like window alert </p>
+<script>
+alert(7+3);
+</script>
+
+<!-- Console.log for debugging -->
+<h3>Console.log for debugging</h3>
+<p> Show on display data </p>
+<script>
+console.log(10+3);
+</script>
+
+<!-- Print by window.print -->
+<h3>Print by window.print</h3>
+<p> Click button for print </p>
+<button onclick="window.print()">Print this page</button>
+
+
+
+
+</body>
+</html>
